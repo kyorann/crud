@@ -1,8 +1,8 @@
 {
-  "name": "CRUD test",
+  "name": "crud",
   "version": "1.0.0",
     "repository": {
-    "type": "git",
+    "type": "git"
   },
   "keywords": [
     "React",
@@ -20,7 +20,7 @@
     "build": "webpack --config webpack.prod.config.js",
     "profile": "webpack --config webpack.prod.config.js --profile --json > profiling.json"
   },
-  "author": "kyrann",
+  "author": "kyorann",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^6.3.5",
