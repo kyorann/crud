@@ -1,0 +1,33 @@
+@import '~less/variables.less';
+
+.new-person {
+  padding: @base-margin;
+
+  &__header {
+    background: @blue;
+    color: white;
+    font-size: 110%;
+    line-height: 1;
+    padding: @base-margin @base-margin;
+    text-transform: uppercase;
+  }
+
+  &__form {
+    padding: @base-margin*2;
+
+    &__group {
+      margin-bottom: @base-margin;
+    }
+
+    label {
+      display: block;
+      font-size: 12px;
+      padding-bottom: @base-margin/3;
+    }
+
+    input, textarea {
+      width: 100%;
+      outline: none;
+    }
+  }
+}

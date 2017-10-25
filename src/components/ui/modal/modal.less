@@ -1,0 +1,52 @@
+ @import '~less/variables.less';
+
+.modal {
+    position: fixed;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    &-transition-appear {
+        transform: perspective(1000px) rotateX(90deg);
+    }
+
+    &-transition-appear&-transition-appear-active {
+        transform: none;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0; right: 0;
+        top: 0; bottom: 0;
+        background-color: rgba(0, 0, 0, 0.75);
+        z-index: -5;
+    }
+
+    &__close {
+        position: absolute;
+        right: @base-margin;
+        top: 12px;
+        transition: opacity 0.15s ease-out;
+        z-index: 50;
+        color: white;
+
+        &:hover {
+            opacity: 0.85;
+        }
+    }
+
+    &__body {
+        position: relative;
+        min-height: 100px;
+        width: 640px;
+        background-color: white;
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.6), 0 5px 14px 0 rgba(0, 0, 0, 0.22);
+    }
+}

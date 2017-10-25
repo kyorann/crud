@@ -1,0 +1,63 @@
+@import '~less/variables.less';
+
+.persons-list {
+   width: 100%;
+   text-align: center;
+
+  &__cell {
+    padding: 10px;
+    width: 100%/6;
+
+    &--transition-enter {
+      opacity: 0.01;
+    }
+
+    &--transition-enter&--transition-enter-active {
+      opacity: 1;
+      transition: opacity .3s ease-in;
+    }
+
+    &--transition-leave {
+      opacity: 1;
+    }
+
+    &--transition-leave&--transition-leave-active {
+      opacity: 0.01;
+      transition: opacity .3s ease-in;
+    }
+  }
+
+  &__header {
+    width: 100%/6;
+    background-color: @gray;
+    color: white;
+    padding: @base-margin/2 0;
+    font-weight: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color .15s ease-in-out;
+    position: relative;
+
+    &:hover {
+      background-color: darken(@gray, 10%);
+
+      >.fa {
+        opacity: 0.5;
+      }
+    }
+
+    >.fa {
+      position: absolute;
+      left: @base-margin;
+      top: 10px;
+      opacity: 0;
+      transition: opacity .15s ease-out;
+    }
+
+    &--sorted {
+      >.fa {
+        opacity: 1 !important;
+      }
+    }
+  }
+}
